@@ -1,0 +1,4 @@
+.ipynb_checkpoints/
+*.egg-info/
+ligotools/.ipynb_checkpoints/
+ligotools/__pycache__/
