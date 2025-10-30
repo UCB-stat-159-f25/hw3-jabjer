@@ -2,3 +2,4 @@
 *.egg-info/
 ligotools/.ipynb_checkpoints/
 ligotools/__pycache__/
+ligotools/tests/__pycache__/
