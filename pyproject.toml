@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools >= 70", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ligotools"
+authors = [
+  { name="Ligo Scientific Collaboration (LSC) and Jakob Bjerre Eriksen", email="jaer21ab@berkeley.edu" },
+]
+description = "LIGO tools"
+readme = "README.md"
+
+requires-python = ">=3.9"
+dependencies = [
+    "tqdm",
+    "numpy>=2.0,<2.3",
+    "scipy>=1.13",
+    "h5py>=3.12",
+    "matplotlib>=3.9",
+    "ipykernel>=6.29"
+]
+
+license = "BSD-3-Clause"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+keywords = ["LIGO"]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/UCB-stat-159-f25/hw3-jabjer/"
+Issues = "https://github.com/UCB-stat-159-f25/hw3-jabjer/issues"
+
+[tool.setuptools]
+packages = ["ligotools"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ligotools.__version__"}
