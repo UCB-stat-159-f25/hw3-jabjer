@@ -1,0 +1,25 @@
+The only thing I used AI for specifically in homework 3 was the following input and output to ChatGPT 5.
+Input:
+    I have the following. How do I do 1 if there is an environment already, and 2 if there is not:
+    
+    .PHONY: env
+    env:
+    source /srv/conda/etc/profile.d/conda.sh
+    
+    1:
+    conda env update -n "myst-hw3" -f "environment.yml"
+    
+    2:
+    conda env create -n "myst-hw3" -f "environment.yml"
+
+Output:
+    Use update with a fallback to create:
+        
+    .PHONY: env
+    env:
+    	source /srv/conda/etc/profile.d/conda.sh
+    	conda env update -n "myst-hw3" -f "environment.yml" --prune \
+    	|| conda env create -n "myst-hw3" -f "environment.yml"
+
+
+Furthermore, I had some trouble with rendering the MyST site properly, so I used ChatGPT 5 for trying to problem-solve that as well. Jimmy ended up telling me that the problem was that I had an extra myst.yml file in my home directory.
